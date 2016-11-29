@@ -48,17 +48,27 @@ body{
 		opacity:1;
 	}
 }
-.close{
+.close,.signinclose{
 	color:black;
 	float:right;
 	font-size: 28px;
 	font-weight: bold;
 }
-.close:hover,
+.close:hover,.signinclose:hover,.signinclose:focus,
 .close:focus{
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
+}
+.brl{
+	margin-left: 45%;
+}
+.buttons{
+	width:50%;
+}
+
+.spl{
+	margin-left: 35%;
 }
 .modal-header{
 	font-family: 'Pacifico';
@@ -71,10 +81,11 @@ body{
 	color:black;
 	padding: 2px 16px;}
 .modal-footer{
-	padding:2px 16px;
-	background-color: white;
+	align-content: center;
+	font-family: 'Pacifico';
 	color:black;
 }
+
 #header-nav{
 	background-color:white;
 	border-radius:0;
@@ -123,14 +134,7 @@ padding-top:25px;}
 	background:#ffffe6;
 }
 #nav-list a span{font-size:1.8em;}
-#phone a{text-align:right;
-padding-bottom:0;
-}	
-#phone div{
-	color:#557c3e;
-	text-align:right;
-	padding-right:15px;
-}
+
 .navbar-header button.navbar-toggle,.navbar-header .icon-bar{
 	border:1px solid #61122f;
 }
@@ -138,35 +142,6 @@ padding-bottom:0;
 .container .jumbotron {
 	box-shadow:0 0 50px #3F0C1F;
 	border:2px solid #3F0C1F;}
-#menu-tile,#specials-tile,#map-tile{
-	height:250px;
-	width:100%;
-	margin-bottom:15px;
-	position:relative;
-	border:2px solid #3F0C1F;
-	overflow:hidden;
-}
-#menu-tile,#specials-tile{width:360px;margin:0 auto 15px;}
-#menu-tile:hover,#specials-tile:hover,#map-tile:hover{box-shadow:0 1px 5px 1px #cccccc;}
-#menu-tile{
-	background:url('../images/menu_img.jpg') no-repeat;
-	
-	background-position:center;
-}
-#specials-tile{
-	background:url('../images/specials_img.jpg') no-repeat;
-	background-position:center;
-}
-#menu-tile span,#specials-tile span,#map-tile span{position:absolute;
-bottom:0;
-right:0;
-width:100%;
-text-align:center;
-font-size:1.6em;
-text-transform:uppercase;
-background-color:#000;
-color:#fff;
-opacity:.8;}
 @media(min-width:1200px){
 	.jumbotron{
 	
@@ -193,7 +168,6 @@ border:2px solid #3F0C1F;}
 	height: 100px;
 	margin :5px 5px 5px 0;
 }
-
 
 @media(min-width:768px)and (max-width:991px){
 }

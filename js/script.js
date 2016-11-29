@@ -1,5 +1,5 @@
 var modal=document.getElementById('myModal');
-var btn=document.getElementById("myBtn");
+var btn=document.getElementById("login");
 var span=document.getElementsByClassName("close")[0];
 
 btn.onclick=function(){
@@ -13,4 +13,20 @@ window.onclick=function(event){
 		modal.style.display="none";
 	}
 }
-console.log('nfjd');
+
+var modals=document.getElementById('signup');
+var sbtn=document.getElementById("signin");
+var close=document.getElementsByClassName("signinclose")[0];
+ 
+sbtn.onclick=function(){
+	modals.style.display="block";
+}
+close.onclick=function(){
+	modals.style.display="none";
+}
+
+window.onclick=function(event){
+if(event.target==modals){
+		modals.style.display="none";
+	}	
+}
