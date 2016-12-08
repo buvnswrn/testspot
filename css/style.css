@@ -148,7 +148,7 @@ padding-top:25px;
 }
 .parallax1{
 	margin:10px 10px;
-	
+	width: inherit;
     background-image: url("../img/c.jpg");
     min-height: 200px; 
     background-attachment: fixed;
@@ -158,7 +158,7 @@ padding-top:25px;
 }
 .parallax2{
 	margin:10px 10px;
-	
+	width: inherit;
     background-image: url("../img/c++.jpg");
     min-height: 200px; 
     background-attachment: fixed;
@@ -168,7 +168,7 @@ padding-top:25px;
 }
 .parallax3{
 	margin:10px 10px;
-	
+	width: inherit;
     background-image: url("../img/java.jpg");
     min-height: 200px; 
     background-attachment: fixed;
@@ -179,7 +179,7 @@ padding-top:25px;
 .parallax4{
 	margin:10px 10px;
 		font-weight: bold;
-
+	width:inherit;
     background-image: url("../img/ds.png");
     min-height: 200px; 
     background-attachment: fixed;
@@ -188,7 +188,7 @@ padding-top:25px;
     background-size: cover;
 }
 .parallax5{
-
+	width:inherit;
     background-image: url("../img/c.jpg");
     min-height: 200px; 
     background-attachment: fixed;
