@@ -229,6 +229,7 @@ padding-top:25px;
 }
 
 .chip img {
+	background-image: url("../img/img_avatar.png");
     float: left;
     margin: 0 10px 0 -25px;
     height: 50px;
