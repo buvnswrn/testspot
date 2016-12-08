@@ -30,3 +30,4 @@ if(event.target==modals){
 		modals.style.display="none";
 	}	
 }
+

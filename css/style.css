@@ -1,8 +1,27 @@
+header{
+
+	display: :block;
+	width:100%;
+	float:left;
+}
+
 body{
 	font-size:16px;
 	color:#fff;
-	
-	background-image:'img/hand.png';
+	background-image: '../img/hand.png';
+}
+footer a{
+text-decoration: none;
+}
+@-webkit-keyframes animatetop{
+	from{
+	top:-300px;
+	opacity:0;
+	}
+	to{
+		top:0;
+		opacity: 1;
+	}
 }
 .modal{
 	display: none;
@@ -30,24 +49,8 @@ body{
 	animation-name: animatetop;
 	animation-duration: 0.4s;
 }
-@-webkit-keyframes animatetop{
-	from{
-	top:-300px;
-	opacity:0;
-	}
-	to{
-		top:0;
-		opacity: 1;
-	}
-}
-@keyframes animatetop{
-	from{top:-300px;opacity:0;
-	}
-	to{
-		top:0;
-		opacity:1;
-	}
-}
+
+
 .close,.signinclose{
 	color:black;
 	float:right;
@@ -86,24 +89,15 @@ body{
 	color:black;
 }
 
-#header-nav{
-	background-color:white;
-	border-radius:0;
-	border:0;
-}
-#body-img img{
-	width:100%;
-	height: 20%;
-	margin :10px 15px 10px 0;
-}
 .navbar-brand{
-padding-top:25px;}
+color:white;
+padding-top:25px;
+}
 .navbar-brand h1{
 		font-family:'Pacifico',serrif;
 		color:black;
 		font-size:1.5em;
 		text-transform:uppercase;
-		
 		text-shadow: 1px 1px 1px #222;
 		margin-top:0;
 		margin-bottom:0px;
@@ -122,18 +116,8 @@ padding-top:25px;}
 .navbar-brand p span{
 	vertical-align:middle;
 }
-#nav-list{
-	margin-top:10px;
-}
-#nav-list a{
-	color:black;
-	text-align:center;
-	
-}
-#nav-list a:hover{
-	background:#ffffe6;
-}
-#nav-list a span{font-size:1.8em;}
+
+
 
 .navbar-header button.navbar-toggle,.navbar-header .icon-bar{
 	border:1px solid #61122f;
@@ -144,26 +128,100 @@ padding-top:25px;}
 	border:2px solid #3F0C1F;}
 @media(min-width:1200px){
 	.jumbotron{
-	
-	background:url('../images/res_front_full.jpg') ;
 	height:675px;
 	box-shadow:0 0 50px #3F0C1F;
 	border:2px solid #3F0C1F;
 }
 
 }
-footer a{
-text-decoration: none;
+.space{
+	clear:left;
+	padding-bottom: 80%;
+	margin-top:inherit; 
+}
+.start{
+
+	background-color:#ccccff;
+	text-align:center;
+	display:block;
+	color:black;
+}
+.parallax1{
+	margin:10px 10px;
+	
+    background-image: url("../img/c.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2{
+	margin:10px 10px;
+	
+    background-image: url("../img/c++.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax3{
+	margin:10px 10px;
+	
+    background-image: url("../img/java.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax4{
+	margin:10px 10px;
+		font-weight: bold;
+
+    background-image: url("../img/ds.png");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax5{
+
+    background-image: url("../img/c.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.45);
+	color: #bfbfbf;
+	text-decoration: none;
+	font-family: 'Oxygen';
+	font-size: 10em;
+	text-shadow: grey 2px 2px 7px;
+	text-align:center;
+	position:relative;
+
+}
+.content a:hover{
+
+	text-decoration: none;
+}
+.content a{
+	color:#bfbfbf;
+	text-decoration: none;
 }
 .jumbotron{
-	background:url('../images/res_front_full.jpg') no-repeat;
-	background-position:center;
 	height:535px;
 	box-shadow:0 0 50px #3F0C1F;
 border:2px solid #3F0C1F;}
 @media(min-width:992px)and (max-width:1199px){
 	#logo-img{
-	background:url('../logo.png') no-repeat;
 	width:100px;
 	height: 100px;
 	margin :5px 5px 5px 0;
@@ -181,12 +239,44 @@ border:2px solid #3F0C1F;}
 	font-size:5vw;
 }
 .navbar-brand p {
-	
 	font-size:.6em;
 	margin-top:12px;
 }
 .navbar-brand p img{height:20px;}
+
+#header-nav{
+	background-color:white;
+	border-radius:0;
+	border:0;
+}
+#body-img img{
+
+	width:100%;
+	height: 20%;
+	margin :10px 15px 10px 0;
+}
+#nav-list{
+	margin-top:10px;
+}
+#nav-list a{
+	color:black;
+	text-align:center;
+	
+
+}
+#cbody{
+	margin:30% 50%;
+}
+#nav-list a:hover{
+	background:#ffffe6;
+}
+#nav-list a span{font-size:1.8em;}
 #cert{position:float;}
 }
 #collapsable-nav a{font-size:1.2em;}
 #collapsable-nav a span{font-size:1em;}
+#body-img img{
+	width:100%;
+	height: 20%;
+	margin :10px 15px 10px 0;
+}

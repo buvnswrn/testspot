@@ -18,7 +18,7 @@
           </a>
 
           <div class="navbar-brand">
-       <div><a href="index.html"><h1>Testers Spot</h1></a></div>
+            <a href="index.html"><h1>Testers Spot</h1></a>
            
           </div>
            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
@@ -49,7 +49,7 @@
 	</div>
 </nav>	
 </header>
-<form>
+<form method="post" action = "<?php echo $_SERVER['PHP_SELF']; ?>">
 	<div id="myModal" class="modal">
 		<!--modal content-->
 		<div class="modal-content">
@@ -58,19 +58,34 @@
 				<h2 class="brl">Login Page</h2>
 			</div>
 			<div class="modal-body"><h4 class="spl">
-				Username:<input type="text"><br></h4>
+				Username:<input type="text" name="username"><br></h4>
 				<br><h4 class="spl">
 				Password:<input type="Password" name="Password">
 			<br><br></h4>
 			</div>
 			<div class="modal-footer"><div class="buttons">
-				<input type="submit" method="Post" value="Login">
+				<input type="submit" name="loginsubmit" value="Login">
 				<input type="reset" value="Reset"></div>
 			</div>
 		</div>
 	</div>
 </form>
-<form>
+
+<?php 
+if(isset($_POST['loginsubmit'])){
+	echo ("lo");
+$name=$_POST("username");
+$password=$_POST("password");
+echo ("hai");
+$tab=mysqli_query($mysqli,("select * from `signup` where `username`='$name' and `password`='$password' "));
+$res=mysqli_fetch_array($tab,MYSQLI_BOTH);
+if(mysqli_num_rows($res)==0){
+die ("invalid");
+}
+else {
+	echo ("welcome");}
+}	?>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <div id="signup" class="modal">
 	<div class="modal-content">
 		<div class="modal-header">
@@ -78,9 +93,9 @@
 			<h2 class="brl">Signin Page</h2>
 		</div>
 		<div class="modal-body"><h4 class="spl">
-			UserName:<input type="text"><br></h4>
+			UserName:<input type="text" name="username"><br></h4>
 			<br><h4 class="spl">
-			E-mail:<input type="mail" name="mail"><br><br>
+			email:<input type="mail" name="email"><br><br>
 			Password:<input type="Password" name="Password">
 			<br><br>
 			Retype Password:<input type="Password" name="Password">
@@ -88,14 +103,37 @@
 			</h4>
 		</div>
 		<div class="modal-footer"><div class="buttons">
-			<input type="Submit" method="Post" value="SignIn">
+			<input type="submit" name="submit" value="SignIn">
 			<input type="Reset"></div>
 		</div>
 	</div>
 </div>
 </form>
+<?php
+if(isset($_POST['submit'])){
+$username="root";
+$password="";
+$hostname="localhost";
+$mysqli=new mysqli("localhost","root","","testerspot");
+if($mysqli->connect_errno)
+{
+	echo "Failed to connect(" . $mysqli->connect_errno . ")" . $mysqli->connect_error;
+}
+mysqli_select_db($mysqli,"testerspot") or die ("unable to connect");
+mysqli_query($mysqli,"select * from signup") or die ("unable to fetch");
+$username=$_POST['username'];
+$email=$_POST['email'];
+$password=$_POST['password'];
+$retype=$_POST['retypepassword'];
+if($retype!= $password)
+{	
+die ("please check your password");
+
+$res=mysqli_query($mysqli,"INSERT INTO `signup`(`username`,`email`,`password`) VALUES ('$username','$email','$password')");}
+}
+?>
 	<div id="body-img">
-		<img src="img/hand.png" width="100%">
+		<img src="img/hand.png">
 	</div>
 <footer class="panel-footer">
 	<div class="container">
